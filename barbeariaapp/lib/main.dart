@@ -12,14 +12,18 @@ class BarbeariaApp extends StatelessWidget {
       title: 'O Lara Barbearia',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        textTheme: Theme.of(context).textTheme.apply(
-          bodyColor: Colors.white,
-          fontFamily: "roboto",
-        )
-      ),
+          textTheme: Theme.of(context).textTheme.apply(
+                bodyColor: Colors.white,
+                fontFamily: "roboto",
+              )),
       home: Scaffold(
         backgroundColor: Colors.black,
-        body: TelaInicial(),
+        body: SingleChildScrollView(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(),
+            child: TelaInicial(),
+          ),
+        ),
       ),
     );
   }
